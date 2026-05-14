@@ -5,6 +5,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SupplierController;
+
+// ... autres routes
+Route::get('/suppliers', [SupplierController::class, 'index']);
+Route::post('/suppliers', [SupplierController::class, 'store']);
+Route::delete('/suppliers/{id}', [SupplierController::class, 'destroy']);
 
 // Auth
 Route::post('/register', [AuthController::class, 'register']);
